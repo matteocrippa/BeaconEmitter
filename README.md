@@ -1,6 +1,6 @@
 # BeaconEmitter
 
-[![CI Status](http://img.shields.io/travis/matteocrippa/BeaconEmitter.svg?style=flat)](https://travis-ci.org/Matteo/BeaconEmitter)
+[![CI Status](http://img.shields.io/travis/matteocrippa/BeaconEmitter.svg?style=flat)](https://travis-ci.org/matteocrippa/BeaconEmitter)
 [![Version](https://img.shields.io/cocoapods/v/BeaconEmitter.svg?style=flat)](http://cocoapods.org/pods/BeaconEmitter)
 [![License](https://img.shields.io/cocoapods/l/BeaconEmitter.svg?style=flat)](http://cocoapods.org/pods/BeaconEmitter)
 [![Platform](https://img.shields.io/cocoapods/p/BeaconEmitter.svg?style=flat)](http://cocoapods.org/pods/BeaconEmitter)
