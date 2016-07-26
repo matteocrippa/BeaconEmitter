@@ -1,0 +1,16 @@
+PODS:
+  - BeaconEmitter (0.1.0)
+
+DEPENDENCIES:
+  - BeaconEmitter (from `../`)
+
+EXTERNAL SOURCES:
+  BeaconEmitter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BeaconEmitter: d37da20a736928d7b39ca037d9f6880fa9833e0b
+
+PODFILE CHECKSUM: b64daabcc464dff85eea90f87fc44933fb04b132
+
+COCOAPODS: 1.0.1

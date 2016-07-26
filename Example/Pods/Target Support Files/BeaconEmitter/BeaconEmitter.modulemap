@@ -1,0 +1,6 @@
+framework module BeaconEmitter {
+  umbrella header "BeaconEmitter-umbrella.h"
+
+  export *
+  module * { export * }
+}
