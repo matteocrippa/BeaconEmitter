@@ -25,13 +25,13 @@ public struct Beacon {
 
 // MARK: - Beacon Protocol
 @objc public protocol BeaconEmitterDelegate {
-    optional func bluetoothIsOff()
+    @objc optional func bluetoothIsOff()
 }
 
 public class BeaconEmitter: NSObject {
     
-    private var beacon: Beacon?
-    private var peripheralManager: CBPeripheralManager = CBPeripheralManager()
+    fileprivate var beacon: Beacon?
+    fileprivate var peripheralManager: CBPeripheralManager = CBPeripheralManager()
     
     public var delegate: BeaconEmitterDelegate?
     
@@ -48,7 +48,7 @@ public class BeaconEmitter: NSObject {
     
     public func start() {
         print(peripheralManager.state)
-        if peripheralManager.state == .PoweredOn  && !peripheralManager.isAdvertising {
+        if peripheralManager.state == .poweredOn  && !peripheralManager.isAdvertising {
             peripheralManager.startAdvertising(generateBeaconData())
         }
     }
@@ -64,9 +64,9 @@ public class BeaconEmitter: NSObject {
         
         guard let b = beacon else { return [:] }
         
-        var advertisementData = [CUnsignedChar](count: bufferSize, repeatedValue: 0)
+        var advertisementData = [CUnsignedChar](repeating: 0, count: bufferSize)
         
-        beacon?.uuid.getUUIDBytes(&advertisementData)
+        beacon?.uuid.getBytes(&advertisementData)
         
         advertisementData[16] = CUnsignedChar(b.major >> 8)
         advertisementData[17] = CUnsignedChar(b.major & 255)
@@ -85,10 +85,10 @@ public class BeaconEmitter: NSObject {
 // MARK: - Beacon Delegate
 extension BeaconEmitter: CBPeripheralManagerDelegate {
     
-    public func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager) {
+    public func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
         
         switch peripheralManager.state {
-        case .PoweredOn:
+        case .poweredOn:
             start()
         default:
             sendBluetoothIsOff()

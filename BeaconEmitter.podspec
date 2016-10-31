@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'BeaconEmitter'
-  s.version          = '0.1.0'
-  s.summary          = 'A simpe Beacon emitter writter in Swift.'
+  s.version          = '0.2.0'
+  s.summary          = 'A simple Beacon emitter writter in Swift.'
 
   s.description      = <<-DESC
 Beacon emitter built in Swift on top of Corebluetooth.

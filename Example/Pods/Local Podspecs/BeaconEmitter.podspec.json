@@ -1,22 +1,24 @@
 {
   "name": "BeaconEmitter",
-  "version": "0.1.0",
-  "summary": "A short description of BeaconEmitter.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/BeaconEmitter",
+  "version": "0.2.0",
+  "summary": "A simple Beacon emitter writter in Swift.",
+  "description": "Beacon emitter built in Swift on top of Corebluetooth.\nIt works with iOS and tvOS based devices",
+  "homepage": "https://github.com/matteocrippa/BeaconEmitter",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "Matteo": "matteo@boostco.de"
+    "Matteo Crippa": ""
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/BeaconEmitter.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/matteocrippa/BeaconEmitter.git",
+    "tag": "0.2.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "8.0",
+    "tvos": "9.0"
   },
-  "source_files": "BeaconEmitter/Classes/**/*"
+  "source_files": "BeaconEmitter/Classes/**/*",
+  "frameworks": "CoreBluetooth"
 }
