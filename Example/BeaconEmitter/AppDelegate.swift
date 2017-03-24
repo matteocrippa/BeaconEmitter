@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         guard let uuid = UUID(uuidString: "E2AD5810-554E-11E4-9E35-164230D1DF67") else { return true }
         
-        let beaconData = Beacon(uuid: uuid as NSUUID, minor: 1000, major: 56, power: -59)
+        let beaconData = Beacon(uuid: uuid, minor: 1000, major: 56, power: -59)
         
         beacon = BeaconEmitter(beacon: beaconData)
         beacon?.start()

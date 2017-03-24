@@ -10,12 +10,12 @@ import CoreBluetooth
 
 // MARK: - Beacon struct
 public struct Beacon {
-    public var uuid: NSUUID
+    public var uuid: UUID
     public var minor: __uint16_t
     public var major: __uint16_t
     public var power: Int8
     
-    public init(uuid: NSUUID, minor: __uint16_t, major: __uint16_t, power: Int8) {
+    public init(uuid: UUID, minor: __uint16_t, major: __uint16_t, power: Int8) {
         self.uuid = uuid
         self.minor = minor
         self.major = major
