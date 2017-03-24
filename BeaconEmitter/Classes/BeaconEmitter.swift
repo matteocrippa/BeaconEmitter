@@ -47,7 +47,7 @@ public class BeaconEmitter: NSObject {
     }
     
     public func start() {
-        print(peripheralManager.state)
+        print(peripheralManager.state.rawValue)
         if peripheralManager.state == .poweredOn  && !peripheralManager.isAdvertising {
             peripheralManager.startAdvertising(generateBeaconData())
         }

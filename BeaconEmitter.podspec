@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'BeaconEmitter'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'A simple Beacon emitter writter in Swift.'
 
   s.description      = <<-DESC
